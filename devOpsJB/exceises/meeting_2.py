@@ -6,7 +6,7 @@ if (first_count ==1) and (dot_count>0):
     print ("legal mail found")
 else:
     print ("not legal mail found ")
-first_index = 0 
+first_index = 0 # first index represent the index of @ 
 if (first_count > 0 ):
     first_index= input_mail.index("@")
 index_dot = input_mail.index(".")
