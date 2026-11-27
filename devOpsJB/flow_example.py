@@ -34,7 +34,7 @@ num_1 = 10
 # if (num_1 % 5 ==0):
 #     print ("divied by 5 number found ")
 
-#example of multiple if 
+#example of multiple if actions 
 
 if (num_1 % 2 ==0) and (num_1 ==11):
     print ("dived by 2 number found")
