@@ -1,0 +1,12 @@
+import os
+from pathlib import Path
+
+default_base = Path.home() / "automation_workspace"
+base_dir = Path(os.getenv("APP_BASE_DIR", default_base))
+parent_dir = default_base.parent
+
+reports_dir = base_dir / "reports" / "monthly"
+reports_dir.mkdir(parents=True, exist_ok=True)
+
+target_file = reports_dir / "summary.csv"
+print("path", target_file)

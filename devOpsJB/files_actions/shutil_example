@@ -1,0 +1,23 @@
+import shutil
+from pathlib import Path
+
+file = Path(__file__).resolve().parents[2] / "os_demo_dir" / "source.txt"
+
+if not file.exists():
+    file.touch()
+    print(f"Created empty file: {file}")
+
+shutil.copy(file, file.with_name("backup.txt"))
+shutil.copy2(file, file.with_name("backup.txt"))
+
+archive_dir = file.parent / "archive"
+archive_dir.mkdir(exist_ok=True)
+
+shutil.move(file, archive_dir / "old.txt")
+python_path = shutil.which("python")
+print(f"file found by which in {python_path}")
+
+shutil.rmtree(archive_dir)
+
+
+    
